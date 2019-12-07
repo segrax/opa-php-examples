@@ -8,14 +8,14 @@ allow {
     input.token.sub == "opa"
 }
 
-# Allow use to access their account
+# Allow a user to access their own private end point
 allow {
     input.method == "GET"
     input.path = ["welcome", userid ]
     userid == input.token.sub
 }
 
-# Allow authed user to create a location
+# Allow anyone (inluding unauthed) users access to the public end point
 allow {
     input.path = ["public"]
     input.method == "GET"
