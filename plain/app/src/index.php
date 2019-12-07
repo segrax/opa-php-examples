@@ -71,7 +71,7 @@ $client->dataUpdate('servers', json_encode([
     ['network' => [3, 4], 'name' => 'B Server'],
     ['network' => [2, 3], 'name' => 'C Server'],
     ['network' => [2, 3], 'name' => 'D Server'],
-    ]));
+    ], JSON_THROW_ON_ERROR));
 
 //Try a query which finds the name of all servers using port 2
 $response = $client->query('data.servers[serverid].network[x] == 2; 
