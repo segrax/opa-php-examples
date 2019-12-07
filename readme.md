@@ -1,9 +1,10 @@
 # segrax/opa-php-examples
 
-Examples of using Open Policy Agent (OPA) with the segrax/open-policy-agent library with PHP 7.3.
+Examples of using Open Policy Agent (OPA) with the segrax/open-policy-agent library on PHP 7.3.
 
-These examples are pre-configured with insecure JWTs which should never be reused.
-The API exmaple is setup for xdebug including working [@code](https://code.visualstudio.com/) configuration.
+These examples are pre-configured to work out of the box and contain insecure JWTs / secret-key and must never be reused for any purpose.
+
+The API is setup for xdebug including working [@code](https://code.visualstudio.com/) configuration.
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.md)
 [![Build Status](https://api.travis-ci.com/segrax/opa-php-examples.svg)](https://travis-ci.com/segrax/openpolicyagent)
