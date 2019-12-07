@@ -6,6 +6,8 @@ These examples are pre-configured to work out of the box and contain insecure JW
 
 The API is setup for xdebug including working [@code](https://code.visualstudio.com/) configuration.
 
+All Examples make use of docker-compose, and executing the steps below will launch multiple contains.
+
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.md)
 [![Build Status](https://api.travis-ci.com/segrax/opa-php-examples.svg)](https://travis-ci.com/segrax/openpolicyagent)
 
@@ -36,7 +38,7 @@ This example serves up policies in a bundle to the running OPA using the Distrib
 
 A [Postman](https://www.getpostman.com/) collection is included inside slim4-api, import it and test both endpoints.
 
-This is the policy for the included example endpoint,
+This is the policy for the included example endpoint.
 ```
 package slim.api
 
