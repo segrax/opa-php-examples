@@ -1,0 +1,15 @@
+services:
+  slimapi:
+    url: http://nginx/opa
+    credentials:
+      bearer:
+        token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZWdyYXgiLCJpYXQiOjE1NDkxODQwMDgsInN1YiI6Im9wYSJ9.YwAuCy-DxsptuZg1pqa-P-G43DvS5Nbd9RnpUXe2W6s"
+
+bundles:
+  authz:
+    service: slimapi
+    polling:
+      min_delay_seconds: 60
+      max_delay_seconds: 120
+
+default_decision: /slimapi/api/allow

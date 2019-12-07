@@ -1,0 +1,58 @@
+version: '2'
+services:
+    nginx:
+        container_name: myapp-web
+        build: 
+            context: ./Docker/nginx
+        ports:
+            - "80:80"
+        depends_on:
+            - php
+        networks:
+            main:
+                aliases:
+                - web
+        environment:
+            APP_PHPHOST: 'php'
+        volumes:
+            - ./Docker/nginx/default.conf:/nginx.conf
+            - ./app:/srv
+    php:
+        container_name: myapp-php
+        build: 
+            context: ./Docker/php-fpm
+        ports:
+            - "9000:9000"
+        depends_on:
+            - opa
+        networks:
+            main:
+                aliases:
+                - php
+        volumes:
+            - ./app:/srv/app
+            - ./logs:/srv/logs
+
+    opa:
+        container_name: myapp-opa
+        image: openpolicyagent/opa:latest
+
+        networks:
+            main:
+                aliases:
+                - opa
+        ports:
+            - "8181:8181"
+        command:
+            - "run"
+            - "--server"
+            - "--config-file=/config.yaml"
+            - "--authentication=token"
+            - "--log-level=debug"
+            - "/authz.rego"
+        volumes:
+            - ./app/config.yaml:/config.yaml
+            - ./app/opa/system/authz.rego:/authz.rego
+
+networks:
+    main:

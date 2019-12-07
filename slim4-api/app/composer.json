@@ -1,0 +1,43 @@
+{
+    "name": "segrax/opa-php-examples",
+    "description": "examples of open policy agent use",
+    "keywords": [
+        "middleware",
+        "psr-7",
+        "psr-15",
+        "opa",
+        "authz"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Robert Crossfield",
+            "email": "segrax19@gmail.com",
+            "homepage": "https://github.com/segrax/"
+        }
+    ],
+	
+    "require": {
+        "slim/slim": "^4.3",
+		"slim/psr7": "^0.6.0",
+        "monolog/monolog": "^1.17",
+        "php-di/php-di": "^6",
+        "segrax/open-policy-agent": "dev-master",
+        "tuupola/slim-jwt-auth": "^3.1",
+		"tuupola/cors-middleware": "^1.1",
+		"vlucas/phpdotenv":"^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/App"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "donatj/mock-webserver": "^2.1"
+    }
+}

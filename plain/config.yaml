@@ -1,0 +1,15 @@
+services:
+  baseapp:
+    url: http://nginx/opa
+    credentials:
+      bearer:
+        token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZWdyYXgiLCJpYXQiOjE1NDkxODQwMDgsInN1YiI6Im9wYSJ9.4P-2t6UltVObOmTCsGPB_ekogEuIsepfY9S-lGgBv0k"
+
+#bundles:
+#  authz:
+#    service: baseapp
+#    polling:
+#      min_delay_seconds: 60
+#      max_delay_seconds: 120
+
+default_decision: /baseapp/api/allow

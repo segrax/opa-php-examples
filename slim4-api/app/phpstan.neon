@@ -1,0 +1,4 @@
+parameters:
+	ignoreErrors:
+		- '#App\\Application::__construct\(\) does not call parent constructor from Slim\\App.#'
+

@@ -1,0 +1,29 @@
+version: '2'
+services:
+    opa:
+        container_name: plain-opa
+        image: openpolicyagent/opa:latest
+
+        networks:
+            main:
+                aliases:
+                - opa
+
+        ports:
+            - "8180:8181"
+
+        command:
+            - "run"
+            - "--server"
+            - "--config-file=/config.yaml"
+            - "--authentication=token"
+            - "--log-level=debug"
+            - "/authz.rego"
+
+        volumes:
+            - ./config.yaml:/config.yaml
+            - ./policies/authz.rego:/authz.rego
+
+
+networks:
+    main:
