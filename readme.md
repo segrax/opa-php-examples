@@ -9,9 +9,8 @@ These examples are pre-configured with insecure JWTs which should never be reuse
 
 
 ## Includes
-
 * Plain PHP usage of client
-* Slim 4 API Authorization
+* Slim 4 Skeleton API with policy authorization
 
 
 ## Usage
@@ -28,7 +27,7 @@ This example can be used for making queries to an instance of OPA.
 This example demonstrates how to invoke a policy for making a decision on access to a route.
 ```bash
     cd slim4-api
-	make start
+    make start
 ```
 
 The containers will now build and be started, by default the API will be listening on port 80.
