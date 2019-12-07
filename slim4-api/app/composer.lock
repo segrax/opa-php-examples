@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "99896fcc33a7b4188380ebb0177101b0",
+    "content-hash": "7247cc9edd68af46677f36a86650336d",
     "packages": [
         {
             "name": "fig/http-message-util",
@@ -1122,7 +1122,7 @@
         },
         {
             "name": "segrax/open-policy-agent",
-            "version": "dev-master",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/segrax/openpolicyagent.git",
@@ -1854,9 +1854,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "segrax/open-policy-agent": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

@@ -18,7 +18,7 @@
         }
     ],
     "require": {
-        "segrax/open-policy-agent": "dev-master"
+        "segrax/open-policy-agent": "^0.1"
     },
     "autoload": {
         "psr-4": {

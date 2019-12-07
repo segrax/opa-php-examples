@@ -22,7 +22,7 @@
 		"slim/psr7": "^0.6.0",
         "monolog/monolog": "^1.17",
         "php-di/php-di": "^6",
-        "segrax/open-policy-agent": "dev-master",
+        "segrax/open-policy-agent": "^0.1",
         "tuupola/slim-jwt-auth": "^3.1",
 		"tuupola/cors-middleware": "^1.1",
 		"vlucas/phpdotenv":"^3.1"

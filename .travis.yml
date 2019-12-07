@@ -5,7 +5,10 @@ services:
 
 script:
   - cd plain
+  - make composer-install-dev
   - make tests
   - cd ..
   - cd slim4-api
+  - make composer-install-dev
   - make tests
+  

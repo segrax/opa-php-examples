@@ -74,7 +74,9 @@ $client->dataUpdate('servers', json_encode([
     ]));
 
 //Try a query which finds the name of all servers using port 2
-$response = $client->query('data.servers[serverid].network[x] == 2; data.servers[serverid].name = name; data.servers[serverid].network[x] = port', false, false, false, false);
+$response = $client->query('data.servers[serverid].network[x] == 2; 
+							data.servers[serverid].name = name; 
+							data.servers[serverid].network[x] = port', false, false, false, false);
 $results = $response->getResults();
 
 foreach ($results as $result) {
