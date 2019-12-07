@@ -129,7 +129,6 @@ class Application extends App
      */
     public function getLogger()
     {
-
         return $this->getDependency("logger");
     }
 

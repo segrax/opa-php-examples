@@ -29,13 +29,11 @@ use RuntimeException;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
+/**
+ * Index Controller
+ */
 class IndexController extends BaseController
 {
-    public function __construct()
-    {
-        parent::__construct();
-    }
-
     /**
      * Public end point
      *

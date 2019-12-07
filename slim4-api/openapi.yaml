@@ -1,0 +1,59 @@
+openapi: "3.0.2"
+info:
+  title: "slim4-api"
+  version: "2.5"
+
+paths:
+  /public:
+    get:
+      responses:
+        200:
+          description: Successful 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WelcomePublic'
+ 
+  /welcome/{username}:
+    get:
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: username
+          required: true
+          schema:
+            type: string
+          description: The username
+          
+      responses:
+        200:
+          description: Successful 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WelcomePrivate'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+                
+
+components:
+  schemas:
+    WelcomePublic:
+      type: array
+      items:
+        example: {message: 'public'}
+    WelcomePrivate:
+      type: array
+      items:
+        example: {message: 'Welcome {username}'}
+  
+  securitySchemes:
+    bearerAuth:            # arbitrary name for the security scheme
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      
+  responses:
+    UnauthorizedError:
+      description: Access token is missing or invalid

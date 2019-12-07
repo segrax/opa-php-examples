@@ -29,6 +29,9 @@ use App\Application;
 use Psr\Log\LoggerInterface;
 use Psr\Http\Message\ResponseInterface;
 
+/**
+ * Base Controller
+ */
 class BaseController
 {
     /** @var LoggerInterface */

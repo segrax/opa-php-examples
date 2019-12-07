@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "9840ff46-773f-48d6-a86f-a4baa0b3512a",
+		"name": "slim4-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Private Endpoint",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDkxODU4MzksInN1YiI6InNsaW1hcGkifQ.vWCHDYDVURPBdiSQklQ3wrgtdkTngVH_PcNRPmjEQ_Q",
+								"type": "string"
+							}
+						]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/welcome/slimapi",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"welcome",
+						"slimapi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Public Endpoint",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/public",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"public"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDkxODU4MzksInN1YiI6InNsaW1hcGkifQ.vWCHDYDVURPBdiSQklQ3wrgtdkTngVH_PcNRPmjEQ_Q",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "5287fba0-fb0d-433d-a57d-6e5c2262fb99",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "67bb68e6-e2bb-4ef1-bd28-c557f7eb9072",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "08bc2faa-e11c-4f84-8c78-8eff7aaec8ac",
+			"key": "baseUrl",
+			"value": "http://localhost",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

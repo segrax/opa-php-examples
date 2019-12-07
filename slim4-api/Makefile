@@ -17,9 +17,6 @@ DOCKER_RUN_CMD = docker run $(DOCKER_PARAMS)
 .DEFAULT:
 	$(DOCKER_RUN_CMD) $(TEST_CONTAINER) $@
 
-test:
-	$(DOCKER_RUN_CMD) $(TEST_CONTAINER) tests
-
 start:
 	docker-compose up --build -d
 

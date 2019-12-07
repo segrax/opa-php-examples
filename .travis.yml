@@ -1,0 +1,11 @@
+language: php
+
+services:
+  - docker
+
+script:
+  - cd plain
+  - make tests
+  - cd ..
+  - cd slim4-api
+  - make tests
