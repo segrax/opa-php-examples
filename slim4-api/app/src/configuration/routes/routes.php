@@ -23,13 +23,15 @@ SOFTWARE.
  * @license   https://www.opensource.org/licenses/mit-license.php
  */
 
-use Slim\Psr7\Request;
-use Slim\Psr7\Response;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\RequestInterface;
 use Slim\Routing\RouteCollectorProxy;
 
 $app = App\Application::getInstance();
 
-$app->get('/opa/bundles/{name}', function (Request $request, Response $response, array $args) {
+// This is only defined for the router.
+// without, the Distributor middleware never gets the chance to execute
+$app->get('/opa/bundles/{name}', function (RequestInterface $request, ResponseInterface $response, array $args) {
     return $response->withStatus(404);
 })->setName("opa");
 

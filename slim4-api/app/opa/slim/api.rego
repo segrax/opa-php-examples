@@ -4,7 +4,7 @@ default allow = false
 
 # OPA Bundle
 allow {
-    input.path = ["opa", "bundles", "{name}"]
+    input.path = ["opa", "bundles", name]
     input.token.sub == "opa"
 }
 

@@ -55,16 +55,13 @@ $app->add(new OpaDistributor(
 $app->add(new \Tuupola\Middleware\JwtAuthentication([
     "algorithm" => ["HS256"],
     "attribute" => "token",
-
     "secure" => false,
-    "relaxed" => ["localhost", "nginx"],
     "secret" => getenv("APP_SECRET_KEY"),
 
     "logger" => $app->getLogger(),
 
     // Public Routes
     'ignore' => $app->getSetting('public_routes')
-
 ]));
 
 $app->add(new \Tuupola\Middleware\CorsMiddleware([

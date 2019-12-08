@@ -16,7 +16,6 @@ services:
             APP_PHPHOST: 'php'
         volumes:
             - ./Docker/nginx/default.conf:/nginx.conf
-            - ./app:/srv
     php:
         container_name: myapp-php
         build: 
@@ -31,7 +30,6 @@ services:
                 - php
         volumes:
             - ./app:/srv/app
-            - ./logs:/srv/logs
 
     opa:
         container_name: myapp-opa
