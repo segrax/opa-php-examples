@@ -11,7 +11,7 @@ The API is setup for xdebug including working [@code](https://code.visualstudio.
 
 All Examples make use of docker-compose, and executing the steps below will launch multiple contains.
 
-
+For a walkthrough using these examples please see this [tutorial](https://coil.com/p/segra/OPA-for-API-Authorization-with-Slim-PHP/H-7YsQL2m)
 
 ## Includes
 * Plain PHP usage of client
