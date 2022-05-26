@@ -19,7 +19,7 @@
 	
     "require": {
         "slim/slim": "^4.3",
-		"slim/psr7": "^0.6.0",
+		"slim/psr7": "^1",
         "monolog/monolog": "^1.17",
         "php-di/php-di": "^6",
         "segrax/open-policy-agent": "^0.1",
